@@ -96,6 +96,10 @@ class CityListTest {
 
     @Test
     void testNotHasCity() {
-        fail();
+        CityList cityList = mockCityList();
+
+        City otherCity = new City("Red Deer", "Alberta");
+
+        assertFalse(cityList.hasCity(otherCity));
     }
 }
